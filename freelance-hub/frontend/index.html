@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Hub - Connect & Collaborate</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+    <!-- Main Shell App Container -->
+    <div id="app" class="app-layout">
+        <!-- Navigation bar will be injected dynamically -->
+        <header id="app-navbar" class="glass-nav"></header>
+
+        <!-- Main container handles layout of sidebar + pages -->
+        <div class="app-container">
+            <!-- Sidebar will be injected dynamically when logged in -->
+            <aside id="app-sidebar" class="sidebar hidden"></aside>
+            
+            <!-- Dynamic Content Viewport -->
+            <main id="app-viewport" class="viewport-content">
+                <div class="loading-spinner-container">
+                    <div class="spinner"></div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Global Toast Notifications Container -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <!-- Main Module JS Entry -->
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>

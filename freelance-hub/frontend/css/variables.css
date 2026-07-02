@@ -1,0 +1,83 @@
+/* Core Design System Tokens & Variable Declarations */
+
+:root {
+    /* Fonts */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-title: 'Outfit', sans-serif;
+
+    /* Common Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Border Radii */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* Theme-independent Accents */
+    --primary: 250 89% 65%; /* Vibrant Indigo/Violet */
+    --primary-hover: 250 89% 55%;
+    --primary-rgb: 99, 102, 241;
+    
+    --success: 142 70% 45%; /* Emerald */
+    --success-rgb: 16, 185, 129;
+    
+    --warning: 38 92% 50%; /* Gold Amber */
+    --danger: 350 80% 55%; /* Crimson Rose */
+    --accent: 190 90% 50%; /* Electric Cyan */
+    
+    /* Default: Dark Theme HSL Values */
+    --background-hsl: 224 25% 6%;
+    --surface-hsl: 224 20% 9%;
+    --surface-card-hsl: 224 18% 13%;
+    --surface-hover-hsl: 224 15% 18%;
+    --surface-glass: rgba(11, 15, 25, 0.7);
+    --border-hsl: 224 14% 18%;
+    --border-hover-hsl: 224 14% 28%;
+    --text-hsl: 210 40% 98%;
+    --text-secondary-hsl: 215 20% 68%;
+    --text-muted-hsl: 215 15% 48%;
+    --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 8px -1px rgba(0, 0, 0, 0.3);
+    --shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+/* Light Theme overrides */
+[data-theme="light"] {
+    --background-hsl: 210 20% 98%;
+    --surface-hsl: 0 0% 100%;
+    --surface-card-hsl: 210 30% 95%;
+    --surface-hover-hsl: 210 20% 90%;
+    --surface-glass: rgba(255, 255, 255, 0.75);
+    --border-hsl: 214 32% 91%;
+    --border-hover-hsl: 214 25% 80%;
+    --text-hsl: 222 47% 11%;
+    --text-secondary-hsl: 215 16% 45%;
+    --text-muted-hsl: 215 13% 60%;
+    --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 8px -1px rgba(0, 0, 0, 0.03);
+    --shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.05);
+}
+
+/* Synthesizing Colors */
+:root {
+    --bg-color: hsl(var(--background-hsl));
+    --surface-color: hsl(var(--surface-hsl));
+    --card-color: hsl(var(--surface-card-hsl));
+    --hover-color: hsl(var(--surface-hover-hsl));
+    --border-color: hsl(var(--border-hsl));
+    --border-hover-color: hsl(var(--border-hover-hsl));
+    --text-color: hsl(var(--text-hsl));
+    --text-secondary: hsl(var(--text-secondary-hsl));
+    --text-muted: hsl(var(--text-muted-hsl));
+    
+    --primary-color: hsl(var(--primary));
+    --primary-hover-color: hsl(var(--primary-hover));
+    --success-color: hsl(var(--success));
+    --warning-color: hsl(var(--warning));
+    --danger-color: hsl(var(--danger));
+    --accent-color: hsl(var(--accent));
+}
